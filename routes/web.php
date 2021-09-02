@@ -25,6 +25,9 @@ Route::prefix('admin')
         Route::get('/', 'DashboardController@index')->name('admin-dashboard');
         Route::resource('user', 'UserController');
         Route::resource('tourist-attraction', 'TouristAttractionController');
+        Route::resource('tourist-gallery', 'TouristGalleryController');
+        Route::resource('checkout', 'CheckoutController');
+        Route::resource('user', 'UserController');
     });
 
 Route::get('/debug-sentry', function () {

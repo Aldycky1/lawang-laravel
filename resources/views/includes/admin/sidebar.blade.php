@@ -10,36 +10,36 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ (request()->is('admin')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin-dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
     </li>
     <!-- Nav Item - Paket Wisata -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ (request()->is('admin/tourist-attraction*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('tourist-attraction.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Paket Wisata</span>
         </a>
     </li>
     <!-- Nav Item - Galeri Wisata -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ (request()->is('admin/tourist-gallery*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('tourist-gallery.index') }}">
             <i class="fas fa-fw fa-images"></i>
             <span>Galeri Wisata</span>
         </a>
     </li>
     <!-- Nav Item - Checkout -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('checkout.index') }}">
             <i class="fas fa-fw fa-shopping-cart"></i>
             <span>Checkout</span>
         </a>
     </li>
     <!-- Nav Item - Users -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ (request()->is('admin/users*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('user.index') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span>
         </a>

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone_number', 'gender', 'date_of_birth', 'checkouts_id'
+        'name', 'email', 'password', 'phone_number', 'gender', 'photo', 'date_of_birth', 'checkouts_id', 'roles'
     ];
 
     /**
@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function checkout()
+    {
+        $this->belongsTo(Checkout::class, 'checkouts_id', 'id');
+    }
 }

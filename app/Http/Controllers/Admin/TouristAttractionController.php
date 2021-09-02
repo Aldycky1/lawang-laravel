@@ -59,7 +59,7 @@ class TouristAttractionController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.tourist-attraction.create');
     }
 
     /**

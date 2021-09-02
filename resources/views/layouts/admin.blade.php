@@ -5,7 +5,7 @@
 
     @include('includes.admin.meta')
 
-    <title>SB Admin 2 - @yield('title')</title>
+    <title>@yield('title')</title>
 
     @stack('before-style')
     @include('includes.admin.style')
