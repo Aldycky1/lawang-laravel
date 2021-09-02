@@ -20,7 +20,7 @@
     <li class="nav-item {{ (request()->is('admin/tourist-attraction*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('tourist-attraction.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
-            <span>Paket Wisata</span>
+            <span>Tempat Wisata</span>
         </a>
     </li>
     <!-- Nav Item - Galeri Wisata -->
@@ -38,7 +38,7 @@
         </a>
     </li>
     <!-- Nav Item - Users -->
-    <li class="nav-item {{ (request()->is('admin/users*')) ? 'active' : '' }}">
+    <li class="nav-item {{ (request()->is('admin/user*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('user.index') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span>

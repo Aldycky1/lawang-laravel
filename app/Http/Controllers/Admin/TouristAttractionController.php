@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\TouristAttractionRequest;
 use App\TouristAttraction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use Yajra\DataTables\Facades\DataTables;
 
@@ -31,10 +33,10 @@ class TouristAttractionController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="' . route('category.edit', $item->id) . '">
+                                    <a class="dropdown-item" href="' . route('tourist-attraction.edit', $item->id) . '">
                                         Edit
                                     </a>
-                                    <form action="' . route('category.destroy', $item->id) . '" method="POST">
+                                    <form action="' . route('tourist-attraction.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                             Hapus
@@ -68,9 +70,15 @@ class TouristAttractionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TouristAttractionRequest $request)
     {
-        //
+        $data = $request->all();
+
+        $data['slug'] = Str::slug($request->name);
+
+        TouristAttraction::create($data);
+
+        return redirect()->route('tourist-attraction.index');
     }
 
     /**
@@ -92,7 +100,11 @@ class TouristAttractionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = TouristAttraction::findOrFail($id);
+
+        return view('pages.admin.tourist-attraction.edit', [
+            'item' => $item
+        ]);
     }
 
     /**
@@ -102,9 +114,16 @@ class TouristAttractionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TouristAttractionRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $data['slug'] = Str::slug($request->name);
+
+        $item = TouristAttraction::findOrFail($id);
+        $item->update($data);
+
+        return redirect()->route('tourist-attraction.index');
     }
 
     /**
@@ -115,6 +134,9 @@ class TouristAttractionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = TouristAttraction::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('pages.admin.tourist-attraction.index');
     }
 }

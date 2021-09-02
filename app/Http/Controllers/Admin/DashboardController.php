@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Checkout;
 use App\Http\Controllers\Controller;
+use App\TouristAttraction;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.dashboard');
+        return view('pages.admin.dashboard', [
+            'tourist_attraction' => TouristAttraction::count(),
+            'checkout' => Checkout::count(),
+            'checkout_pending' => Checkout::where('status', 'PENDING')->count(),
+            'checkout_success' => Checkout::where('status', 'SUCCESS')->count(),
+        ]);
     }
 
     /**

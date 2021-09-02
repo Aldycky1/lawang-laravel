@@ -7,9 +7,9 @@
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Paket Wisata</h1>
+                <h1 class="h3 mb-0 text-gray-800">Tempat Wisata</h1>
                 <a href="{{ route('tourist-attraction.create') }}" class="btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-plus fa-sm text-white-50">Tambah Paket Wisata</i>
+                    <i class="fas fa-plus fa-sm text-white-50">Tambah Tempat Wisata</i>
                 </a>
             </div>
 
@@ -37,7 +37,7 @@
     <!-- /.container-fluid -->
 @endsection
 
-@push('addon-script')
+@push('after-script')
     <script>
         var datatable = $('#crudTable').DataTable({
             processing: true,

@@ -3,9 +3,8 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class UserRequest extends FormRequest
+class TouristAttractionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,14 +24,9 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:50',
-            // 'email' => 'required|unique:users,email',
-            'email' => [
-                'required', 'email',
-                Rule::unique('users', 'email')->ignore($this->user)
-            ],
-            'photo' => 'nullable|image',
-            'roles' => 'nullable|string|in:ADMIN,USER',
+            'name' => 'required|string',
+            'description' => 'required',
+            'address' => 'required'
         ];
     }
 }

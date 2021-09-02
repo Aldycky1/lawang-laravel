@@ -10,8 +10,13 @@ class TouristAttraction extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name', 'description', 'address', 'slug', 'facilities_id', 'tourist_packages_id', 'hotels_id', 'capacities_id', 'regulations_id'
+        'name', 'description', 'address', 'slug'
     ];
 
     protected $hidden = [];
+
+    public function ticket_prices()
+    {
+        $this->hasMany(TicketPrice::class, 'tourist_attractions_id', 'id');
+    }
 }
