@@ -1,0 +1,415 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Assistant", sans-serif;
+  color: #071c4d;
+}
+
+.navbar {
+  margin-top: 16px;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #071c4d;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #071c4d !important;
+}
+
+.btn-navbar-right {
+  margin-top: -10px !important;
+  margin-bottom: -8px !important;
+  margin-right: -18px !important;
+  height: 70px;
+  border-radius: 0;
+}
+
+.btn-login {
+  background-color: #071c4d;
+  border-radius: 20px;
+  max-height: 46px;
+  font-size: 20px;
+  padding: 0 40px 0 40px;
+  color: #ffffff;
+}
+
+.btn-login:hover {
+  background-color: #1e3771;
+  color: #ffffff;
+}
+
+header {
+  margin-top: 70px;
+}
+
+.section-hero-banner {
+  margin-top: 70px;
+}
+
+.section-hero-banner .hero-description {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.btn-mulai-libur,
+.btn-lihat-selengkapnya {
+  margin-top: 40px;
+}
+
+.section-wisata-title {
+  margin-top: 160px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 82.95%);
+  padding-top: 50px;
+  min-height: 440px;
+}
+
+.section-wisata-title .wisata-description {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.section-wisata-content {
+  margin-top: -200px;
+}
+
+.card-wisata {
+  min-height: 254px;
+  max-width: 350px;
+  color: #fff;
+  background-size: cover;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  border-radius: 15px;
+}
+
+.card-wisata:hover {
+  transform: scale(1.1);
+}
+
+.linear-gradient {
+  position: absolute;
+  min-height: 254px;
+  min-width: 350px;
+  padding: 30px;
+  top: 0;
+  bottom: 0;
+
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.popular {
+  position: inherit;
+  border-radius: 0 15px 0 15px;
+  min-width: 100px;
+  padding: 7px 20px;
+  top: 0;
+  right: 0;
+  background-color: #9f5050;
+  color: #fff;
+}
+
+.section-wisata-content h3 {
+  padding: 80px 0;
+}
+
+.card-wisata-link {
+  text-decoration: none !important;
+}
+
+.section-testimonial-title {
+  margin-top: 70px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 82.95%);
+  padding-top: 50px;
+  min-height: 500px;
+}
+
+.section-testimonial-title .testimonial-description {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.section-testimonial-content {
+  margin-top: -280px;
+}
+
+.card-testimonial {
+  padding: 40px 20px 0;
+  border-radius: 11px;
+  margin-bottom: 20px;
+}
+
+.testimonial-content {
+  min-height: 400px;
+}
+
+.testimonial-content .quotes {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.card-testimonial .job {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section-footer a {
+  color: #071c4d;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.copyright {
+  color: #071c4d;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.breadcrumb .breadcrumb-item {
+  font-size: 26px;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item .active {
+  font-weight: bold;
+  color: #071c4d;
+}
+
+.card-profil-desa {
+  padding: 20px;
+  border-radius: 11px;
+}
+
+.card-maps {
+  padding: 20px;
+  border-radius: 11px;
+  min-height: 500px;
+}
+
+.profil-desa .title-wisata {
+  margin-top: 40px;
+}
+
+.profil-desa .deskripsi {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.fasilitas .fasilitas-spesifik {
+  margin-bottom: 20px;
+}
+
+.fasilitas .fasilitas-image {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.fasilitas .description {
+  margin-left: 20px;
+  float: left;
+  overflow: hidden;
+}
+
+.detail-kontak .kontak-image {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.detail-kontak .kontak-description {
+  margin-left: 20px;
+  margin-bottom: 0;
+  float: left;
+  overflow: hidden;
+}
+
+.kontak-description p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.oleh-oleh-title h2 {
+  margin-top: 20px;
+}
+
+.card-oleh-oleh {
+  min-height: 224px;
+  max-width: 350px;
+  color: #fff;
+  background-size: cover;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.maps {
+  min-height: 323px;
+  max-width: 323px;
+  color: #fff;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.login {
+  width: 500px;
+  background: white;
+  margin: 10px auto;
+  padding: 30px 20px;
+}
+
+.hero-aneka-wisata {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.aneka-wisata-pic img {
+  border-radius: 12px;
+}
+
+.hero-aneka-wisata p,
+.alamat-aneka-wisata p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.tiket-masuk,
+.objek-fasilitas {
+  margin-top: 50px;
+}
+
+table.table-bordered > thead > tr > th,
+table.table-bordered > tbody > tr > th,
+table.table-bordered > tbody > tr > td {
+  border: 1px solid black;
+}
+
+.table-custom th,
+.table-custom td {
+  color: #071c4d;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.table-custom > thead > tr > th {
+  font-weight: 600;
+  background-color: #e9f2fe;
+}
+
+.table-custom > tbody > tr > th,
+.table-custom > tbody > tr > td {
+  background-color: #f5f8fb;
+}
+
+.section-ketentuan-paket {
+  margin-top: 40px;
+}
+
+.card-akun {
+  background-color: #edf2f7;
+}
+
+.akun img {
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+.akun .nama {
+  overflow: hidden;
+  float: left;
+}
+
+.akun h3,
+.akun p {
+  margin-bottom: 0;
+}
+
+.menu-akun ul li .active {
+  background-color: #071c4d;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.menu-akun a {
+  color: #071c4d;
+}
+
+.menu-akun img {
+  width: 30px;
+  height: 30px;
+}
+
+.centered-gallery {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.meet-our-team {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.centered-about-us {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-about-us .person {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 82.95%);
+  min-height: 360px;
+}
+
+.card-list-checkout .card-item-list .image-checkout {
+  width: 230px;
+  float: left;
+}
+
+.card-list-checkout .card-item-list .deskripsi-checkout-item {
+  float: left;
+  margin-left: 15px;
+}
+
+.deskripsi-checkout-item .harga {
+  font-size: 23px;
+  font-weight: 600;
+  width: 130px;
+}
+
+.person .quotes {
+  color: #4f5972;
+}
+
+.deskripsi-tim-kiri p,
+.deskripsi-tim-kanan p {
+  font-size: 24px;
+}

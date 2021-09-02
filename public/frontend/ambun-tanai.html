@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisata Ambun Tanai</title>
+    <link
+      rel="stylesheet"
+      href="/frontend/libraries/bootstrap/css/bootstrap.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/frontend/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/index.html" class="navbar-brand">
+          <img
+            src="/frontend/images/logo.png"
+            alt="logo-nagari-lawang"
+            height="66"
+          />
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navb"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item mx-md-1">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/profil.html" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item dropdown mx-md-1">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle active"
+                id="navbardrop"
+                data-toggle="dropdown"
+                >Wisata
+              </a>
+              <div class="dropdown-menu">
+                <a href="/soul-puncak-lawang.html" class="dropdown-item"
+                  >Soul Puncak Lawang</a
+                ><a href="/lawang-adventure-park.html" class="dropdown-item"
+                  >Lawang Park</a
+                ><a href="/ambun-tanai.html" class="dropdown-item active"
+                  >Ambun Tanai</a
+                >
+              </div>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/about-us.html" class="nav-link">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Button -->
+          <form
+            class="form-inline my-2 my-lg-0 d-sm-block"
+            action="/login.html"
+          >
+            <button class="btn btn-login btn-navbar-right my-2 my-sm-0">
+              Log In
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <hr />
+
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html"></a>Home</a></li>
+                <li class="breadcrumb-item active">Ambun Tanai</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="selamat-datang row">
+          <div class="col">
+            <h1 class="text-center">Ambun Tanai</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero banner -->
+      <section class="section-hero-banner">
+        <div class="container">
+          <div class="row hero-aneka-wisata align-items-start">
+            <div class="col-7">
+              <div class="aneka-wisata-pic">
+                <img
+                  src="/frontend/images/ambun-tanai.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-5 align-self-center">
+              <p class="text-justify">
+                Ambun Tanai merupakan salah satu tempat terbaik di Kecamatan
+                Matua, tepatnya di Ambun Pagi Nagari Matua Mudiak berjarak
+                kurang lebih 30 Km dari Kota Bukittinggi atau 32 Km dari Lubuk
+                Basung Ibu Kota Kabupaten Agam. Objek wisata ini dapat ditempuh
+                dengan berjalan kaki dari jalan lintas Bukittinggi-Maninjau.
+                Jika dari Bukittinggi tepat sebelum menuruni Kelok 44, maka akan
+                terlihat Gapura bertuliskan "Ambun Tanai". Sama halnya dengan
+                Puncak Lawang, Ambun Tanai juga merupakan unggulan wisata masa
+                depan bagi Kabupaten Agam khususnya Kecamatan Matua. Dari sini,
+                kita dapat menikmati pemandangan Danau Maninjau dengan leluasa
+                dan suhu sekitar 17-22 ºC.
+              </p>
+            </div>
+          </div>
+          <div class="row alamat-aneka-wisata">
+            <div class="col">
+              <div class="alamat-wisata mt-3">
+                <img
+                  src="/frontend/images/ic_loc.svg"
+                  alt=""
+                  class="ic-alamat-wisata"
+                />
+                <p class="align-items-center d-inline">
+                  <span class="font-weight-bold text-info">Alamat :</span>
+                  Kecamatan Matur, Kabupaten Agam, Provinsi Sumatera Barat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-paket-wisata">
+        <div class="container">
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="title-tiket-masuk mb-4">
+                <h3>Tiket Masuk</h3>
+              </div>
+              <table class="table table-bordered table-custom">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="3" class="text-center">
+                      Harga Tiket Ambun Tanai
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th width="20%" scope="row" class="">Jenis Tiket</th>
+                    <td width="40%">Dewasa</td>
+                    <td width="40%">Anak - anak</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="">Tiket Masuk</th>
+                    <td>Rp. 3.000</td>
+                    <td>Rp. 2.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row objek-fasilitas">
+            <div class="col objek-wisata">
+              <h3>Objek Wisata</h3>
+              <ul>
+                <li>Taman Bermain anak-anak</li>
+                <li>Taman Bunga</li>
+                <li>Tugu Paandang</li>
+                <li>Paralayan</li>
+                <li>Wahana Selfie</li>
+              </ul>
+            </div>
+            <div class="col fasilitas border-left border-dark">
+              <h3>Fasilitas</h3>
+              <ul>
+                <li>Mushola</li>
+                <li>Toilet</li>
+                <li>Tempat Sampah</li>
+                <li>Gazebo</li>
+                <li>Tempat parkir</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="2-hari-1-malam">
+                <div class="title-tiket-masuk mb-3">
+                  <h3>Paket Wisata</h3>
+                  <h5 class="mt-5">Paket 2 Hari 1 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">OYO 2192 Hotel D'ostha</th>
+                      <td>Rp. 144.992</td>
+                      <td>Rp. 214.412</td>
+                      <td>Rp. 284.210</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Yuriko</th>
+                      <td>Rp. 254.273</td>
+                      <td>Rp. 324.245</td>
+                      <td>Rp. 394.239</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Salma</th>
+                      <td>Rp. 291.463</td>
+                      <td>Rp. 361.500</td>
+                      <td>Rp. 431.922</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OYO 1407 Hotel Amali Syariah</th>
+                      <td>Rp. 293.952</td>
+                      <td>Rp. 363.826</td>
+                      <td>Rp. 433.873</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="2-hari-1-malam">
+                <div class="title-tiket-masuk mb-3">
+                  <h3>Paket Wisata</h3>
+                  <h5 class="mt-5">Paket 3 Hari 2 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">OYO 2192 Hotel D'ostha</th>
+                      <td>Rp. 244.992</td>
+                      <td>Rp. 314.412</td>
+                      <td>Rp. 384.210</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Yuriko</th>
+                      <td>Rp. 354.273</td>
+                      <td>Rp. 424.245</td>
+                      <td>Rp. 494.239</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Salma</th>
+                      <td>Rp. 391.463</td>
+                      <td>Rp. 461.500</td>
+                      <td>Rp. 531.922</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OYO 1407 Hotel Amali Syariah</th>
+                      <td>Rp. 393.952</td>
+                      <td>Rp. 463.826</td>
+                      <td>Rp. 533.873</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="2-hari-1-malam">
+                <div class="title-tiket-masuk mb-3">
+                  <h3>Paket Wisata</h3>
+                  <h5 class="mt-5">Paket 4 Hari 3 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">OYO 2192 Hotel D'ostha</th>
+                      <td>Rp. 344.992</td>
+                      <td>Rp. 414.412</td>
+                      <td>Rp. 484.210</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Yuriko</th>
+                      <td>Rp. 454.273</td>
+                      <td>Rp. 524.245</td>
+                      <td>Rp. 594.239</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hotel Salma</th>
+                      <td>Rp. 491.463</td>
+                      <td>Rp. 561.500</td>
+                      <td>Rp. 631.922</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">OYO 1407 Hotel Amali Syariah</th>
+                      <td>Rp. 493.952</td>
+                      <td>Rp. 563.826</td>
+                      <td>Rp. 633.873</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-ketentuan-paket">
+        <div class="container">
+          <div class="row ketentuan-paket">
+            <div class="col">
+              <h3>Ketentuan Paket</h3>
+              <p>Harga paket sudah termasuk :</p>
+              <ul>
+                <li>Akomodasi di hotel pilihan + sarapan pagi.</li>
+                <li>Karcis untuk masuk ke semua objek wisata.</li>
+                <li>
+                  Makan siang dan makan malam di lokal restaurant Ambun Tanai.
+                </li>
+                <li>Dapat menggunakan semua fasilitas yang tersedia.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-footer mt-5 mb-4 border-top">
+      <div class="container pt-5 pb-5">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                <h4>FEATURES</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Social Media Kit</a></li>
+                  <li><a href="#">Affiliate</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>ACCOUNT</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Refund</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Reward</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>OUR COMPANY</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>GET CONNECTED</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Depok</a></li>
+                  <li><a href="#">Indonesia</a></li>
+                  <li><a href="#">0821 - 222 - 1123</a></li>
+                  <li><a href="#">support@lawang.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center pt-4">
+          <div class="col-auto copyright">
+            2021 Copyright Lawang • All rights reserved • Made in Depok
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/frontend/libraries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

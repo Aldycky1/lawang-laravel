@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisata Lawang Adventure Park</title>
+    <link
+      rel="stylesheet"
+      href="/frontend/libraries/bootstrap/css/bootstrap.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/frontend/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/index.html" class="navbar-brand">
+          <img
+            src="/frontend/images/logo.png"
+            alt="logo-nagari-lawang"
+            height="66"
+          />
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navb"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item mx-md-1">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/profil.html" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item dropdown mx-md-1">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle active"
+                id="navbardrop"
+                data-toggle="dropdown"
+                >Wisata
+              </a>
+              <div class="dropdown-menu">
+                <a href="/soul-puncak-lawang.html" class="dropdown-item"
+                  >Soul Puncak Lawang</a
+                ><a
+                  href="/lawang-adventure-park.html"
+                  class="dropdown-item active"
+                  >Lawang Park</a
+                ><a href="/ambun-tanai.html" class="dropdown-item"
+                  >Ambun Tanai</a
+                >
+              </div>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/about-us.html" class="nav-link">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Button -->
+          <form
+            class="form-inline my-2 my-lg-0 d-sm-block"
+            action="/login.html"
+          >
+            <button class="btn btn-login btn-navbar-right my-2 my-sm-0">
+              Log In
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <hr />
+
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item active">Lawang Adventure Park</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="selamat-datang row">
+          <div class="col">
+            <h1 class="text-center">Lawang Adventure Park</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero banner -->
+      <section class="section-hero-banner">
+        <div class="container">
+          <div class="row hero-aneka-wisata align-items-start">
+            <div class="col-7">
+              <div class="aneka-wisata-pic">
+                <img
+                  src="/frontend/images/lawang-park.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-5 align-self-center">
+              <p class="text-justify">
+                Lawang Park adalah nama yang cukup unik. Seunik keindahan yang
+                ada di sana, tempat wisata ini bisa menjadi salah satu daftar
+                destinasi yang akan dikunjungi ketika sedang berada di Sumatera
+                Barat. Berada di ketinggian lebih dari 1000 mdpl, membuat lokasi
+                Lawang Park sering diselimuti suhu yang sejuk. Lokasi Lawang
+                Park sendiri cukup jauh dari kota, sehingga kendaraan umum
+                jarang terlihat sampai menuju lokasinya. Oleh karena itu,
+                wisatawan disarankan untuk menggunakan kendaraan pribadi, baik
+                mobil ataupun motor. Adapun rute yang bisa dilalui adalah dengan
+                melewati simpang tiga Matur. Lanjutkan rutenya dengan berbelok
+                ke arah kanan. Rute ini termasuk salah satu rute terbaik,
+                lantaran bonus hamparan perkebunan tebu di sepanjang jalan yang
+                akan menemani perjalanan.
+              </p>
+            </div>
+          </div>
+          <div class="row alamat-aneka-wisata">
+            <div class="col">
+              <div class="alamat-wisata mt-3">
+                <img
+                  src="/frontend/images/ic_loc.svg"
+                  alt=""
+                  class="ic-alamat-wisata"
+                />
+                <p class="align-items-center d-inline">
+                  <span class="font-weight-bold text-info">Alamat :</span>
+                  Matua Hilia, Desa Nagari Lawang, Kecamatan Matur, Kabupaten
+                  Agam, Provinsi Sumatera Barat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-paket-wisata">
+        <div class="container">
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="title-tiket-masuk mb-4">
+                <h3>Tiket Masuk</h3>
+              </div>
+              <table class="table table-bordered table-custom">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="3" class="text-center">
+                      Harga Tiket Lawang Adventure Park
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th width="20%" scope="row" class="">Jenis Tiket</th>
+                    <td width="40%">Senin - Sabtu</td>
+                    <td width="40%">Minggu - Hari Libur</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="">Tiket Masuk</th>
+                    <td>Rp. 20.000</td>
+                    <td>Rp. 25.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="title-tiket-masuk mb-4">
+                <h3>Waktu Operasional</h3>
+              </div>
+              <table class="table table-bordered table-custom">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2" class="text-center">
+                      Waktu Operasional
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th width="50%" scope="row">Setiap Hari</th>
+                    <td>24 Jam</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row objek-fasilitas">
+            <div class="col objek-wisata">
+              <h3>Objek Wisata</h3>
+              <ul>
+                <li>Spot Foto Perahu Besar</li>
+                <li>Air Terjun</li>
+                <li>Kebun Stroberi</li>
+                <li>Rumah Hobbit</li>
+              </ul>
+            </div>
+            <div class="col kegiatan border-left border-dark">
+              <h3>Kegiatan</h3>
+              <ul>
+                <li>Outbond</li>
+                <li>Tracking</li>
+                <li>Arum Jeram</li>
+                <li>Kilang Tebu</li>
+              </ul>
+            </div>
+            <div class="col fasilitas border-left border-dark">
+              <h3>Fasilitas</h3>
+              <ul>
+                <li>Mushola</li>
+                <li>WC Umum</li>
+                <li>Ruang Pertemuan</li>
+                <li>Kios Pedagang -> beli oleh-oleh</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="2-hari-1-malam">
+                <div class="title-tiket-masuk mb-3">
+                  <h3>Paket Wisata</h3>
+                  <h5 class="mt-5">Paket 2 Hari 1 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Treeli Boutique Hotel</th>
+                      <td>Rp. 723.934</td>
+                      <td>Rp. 793.950</td>
+                      <td>Rp. 864.020</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Starli Hotel</th>
+                      <td>Rp. 759.103</td>
+                      <td>Rp. 829.100</td>
+                      <td>Rp. 899.155</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Grand Malindo Hotel</th>
+                      <td>Rp. 860.000</td>
+                      <td>Rp. 930.000</td>
+                      <td>Rp. 1.234.321</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">The Balcone Hotel & Resort Agam</th>
+                      <td>Rp. 868.658</td>
+                      <td>Rp. 938.650</td>
+                      <td>Rp. 1.008.725</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="3-hari-2-malam mt-3">
+                <div class="title-tiket-masuk mb-3">
+                  <h5>Paket 3 Hari 2 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Treeli Boutique Hotel</th>
+                      <td>Rp. 823.934</td>
+                      <td>Rp. 893.950</td>
+                      <td>Rp. 964.020</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Starli Hotel</th>
+                      <td>Rp. 859.103</td>
+                      <td>Rp. 929.100</td>
+                      <td>Rp. 999.155</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Grand Malindo Hotel</th>
+                      <td>Rp. 960.000</td>
+                      <td>Rp. 1.030.000</td>
+                      <td>Rp. 1.100.000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">The Balcone Hotel & Resort Agam</th>
+                      <td>Rp. 968.658</td>
+                      <td>Rp. 1.038.650</td>
+                      <td>Rp. 1.108.725</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row tiket-masuk">
+            <div class="col">
+              <div class="3-hari-2-malam mt-3">
+                <div class="title-tiket-masuk mb-3">
+                  <h5>Paket 4 Hari 3 Malam</h5>
+                </div>
+                <table class="table table-bordered table-custom">
+                  <thead>
+                    <tr>
+                      <th
+                        width="40%"
+                        scope="col"
+                        rowspan="2"
+                        class="align-middle text-center"
+                      >
+                        Nama Hotel
+                      </th>
+                      <th scope="col" colspan="3" class="text-center">
+                        Jumlah Peserta
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" class="text-center">2-3 orang</th>
+                      <th scope="col" class="text-center">4-5 orang</th>
+                      <th scope="col" class="text-center">6-9 orang</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Treeli Boutique Hotel</th>
+                      <td>Rp. 923.934</td>
+                      <td>Rp. 993.950</td>
+                      <td>Rp. 1.064.020</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Starli Hotel</th>
+                      <td>Rp. 959.103</td>
+                      <td>Rp. 1.029.100</td>
+                      <td>Rp. 1.099.155</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Grand Malindo Hotel</th>
+                      <td>Rp. 1.060.000</td>
+                      <td>Rp. 1.130.000</td>
+                      <td>Rp. 1.200.000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">The Balcone Hotel & Resort Agam</th>
+                      <td>Rp. 1.068.658</td>
+                      <td>Rp. 1.138.650</td>
+                      <td>Rp. 1.208.725</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <form action="/login.html">
+                  <button class="btn btn-utama float-right">
+                    Booking Paket
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-ketentuan-paket">
+        <div class="container">
+          <div class="row ketentuan-paket">
+            <div class="col">
+              <h3>Ketentuan Paket</h3>
+              <p>Harga paket sudah termasuk :</p>
+              <ul>
+                <li>Akomodasi di hotel pilihan + sarapan pagi.</li>
+                <li>Karcis untuk masuk ke semua objek wisata.</li>
+                <li>
+                  Makan siang dan makan malam di lokal restaurant Lawang
+                  Adventure Park.
+                </li>
+                <li>Dapat menggunakan semua fasilitas yang tersedia.</li>
+                <li>Mencakup semua kegiatan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-footer mt-5 mb-4 border-top">
+      <div class="container pt-5 pb-5">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                <h4>FEATURES</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Social Media Kit</a></li>
+                  <li><a href="#">Affiliate</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>ACCOUNT</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Refund</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Reward</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>OUR COMPANY</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>GET CONNECTED</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Depok</a></li>
+                  <li><a href="#">Indonesia</a></li>
+                  <li><a href="#">0821 - 222 - 1123</a></li>
+                  <li><a href="#">support@lawang.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center pt-4">
+          <div class="col-auto copyright">
+            2021 Copyright Lawang • All rights reserved • Made in Depok
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/frontend/libraries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

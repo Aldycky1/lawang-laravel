@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+    <link
+      rel="stylesheet"
+      href="/frontend/libraries/bootstrap/css/bootstrap.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/frontend/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/index-logged.html" class="navbar-brand">
+          <img
+            src="/frontend/images/logo.png"
+            alt="logo-nagari-lawang"
+            height="66"
+          />
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navb"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item mx-md-1">
+              <a href="/index-logged.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/profil-logged.html" class="nav-link active">Profil</a>
+            </li>
+            <li class="nav-item dropdown mx-md-1">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbardrop"
+                data-toggle="dropdown"
+                >Wisata
+              </a>
+              <div class="dropdown-menu">
+                <a href="/soul-puncak-lawang-logged.html" class="dropdown-item"
+                  >Soul Puncak Lawang</a
+                ><a
+                  href="/lawang-adventure-park-logged.html"
+                  class="dropdown-item"
+                  >Lawang Park</a
+                ><a href="/ambun-tanai-logged.html" class="dropdown-item"
+                  >Ambun Tanai</a
+                >
+              </div>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/gallery-logged.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item mx-md-1">
+              <a href="/about-us-logged.html" class="nav-link">About Us</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown mx-md-1">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbardrop"
+                data-toggle="dropdown"
+                >Alifah Fadiyah
+              </a>
+              <div class="dropdown-menu">
+                <a href="/akun.html" class="dropdown-item">Ubah Profil</a
+                ><a href="/daftar-checkout.html" class="dropdown-item"
+                  >Daftar Checkout</a
+                ><a href="/index.html" class="dropdown-item">Keluar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <hr />
+
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item active">Profil</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="selamat-datang row">
+          <div class="col">
+            <h1 class="text-center">
+              Nagari Lawang, Desa di Agam yang Keindahannya Bikin
+              Terbayang-bayang
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero banner -->
+      <section class="section-hero-banner">
+        <div class="container">
+          <div class="row hero-banner">
+            <div class="col-12">
+              <div class="hero-pic">
+                <img
+                  src="/frontend/images/hero-profil.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row profil-dan-maps mt-3">
+            <div class="col-lg-8">
+              <div class="card card-profil-desa">
+                <h2>Profile Desa</h2>
+                <h3 class="title-wisata">Nagari Lawang</h3>
+                <p class="deskripsi">
+                  Nagari Lawang berada di Kecamatan Matur, Kabupaten Agam,
+                  Provinsi Sumatra Barat. Luas Nagari Lawang: 16,69 kilometer
+                  persegi atau 17,81 persen dari luas wilayah Kecamatan Matur.
+                  Nagari Lawang berjarak 3 kilometer dari ibu kota kota
+                  kecamatan, 44 kilometer dari ibu kota kabupaten dan 116
+                  kilometer dari ibu kota provinsi. Nagari Lawang berpenduduk
+                  3.256 jiwa (2017) terdiri dari 1.586 laki-laki dan 1.670
+                  perempuan.
+                </p>
+                <p class="deskripsi">
+                  Masyarakat Lawang Pada umumnya memiliki mata pencaharian yakni
+                  berkebun dan bertani. Tebu lawang salah satu komoditas
+                  unggulan yang diolah oleh masyarakat sekitar menjadi Produk
+                  UMKM seperti gula semut dan Kacang gula merah. Nagari Lawang
+                  terdiri dari sekolompok kawasan yang terdiri dari beberapa
+                  destinasi wisata yakni Lawang Park, Soul Puncak Lawang, Green
+                  View, Tigo Baleh Nan Basa serta mempunyai atraksi wisata
+                  Kilang tebu tradisional dan atraksi seni budaya lainnya.
+                </p>
+
+                <hr />
+
+                <h2 class="title-fasilitas mb-3">Fasilitas</h2>
+                <div class="row fasilitas">
+                  <div class="col-lg-4">
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Areal Parkir</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Cafetaria</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Musholla</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Spot Foto</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>ATMs</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Jungle Tracking</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Outbond</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Tempat Makan</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Balai Pertemuan</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Kuliner</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Selfie Area</h5>
+                      </div>
+                    </div>
+                    <div class="fasilitas-spesifik d-flex align-items-center">
+                      <img
+                        src="/frontend/images/ic_checklist.svg"
+                        alt=""
+                        class="fasilitas-image"
+                      />
+                      <div class="description">
+                        <h5>Wifi Area</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 pl-0">
+              <div class="card card-maps">
+                <h2>Peta Desa</h2>
+                <div
+                  class="maps"
+                  style="background-image: url(/frontend/images/maps.JPG)"
+                ></div>
+                <a href="https://goo.gl/maps/1bzEhXmXZkg1ZxDV6" target="_blank"
+                  >Lihat di Google Maps</a
+                >
+                <hr />
+                <h2 class="mb-3" id="contactPerson">Kontak</h2>
+                <div class="detail-kontak d-flex align-items-start mb-2">
+                  <img
+                    src="/frontend/images/ic_loc.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info">Alamat :</span>
+                      <br />
+                      Jorong Gajah Mati, Nagari Lawang, Kecamatan Matur,
+                      Kabupaten Agam, Provinsi Sumatera Barat.
+                    </p>
+                  </div>
+                </div>
+                <div class="detail-kontak d-flex align-items-start">
+                  <img
+                    src="/frontend/images/ic_person.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info"
+                        >Contact Person :</span
+                      >
+                      <br />
+                      Abdul Rahman
+                    </p>
+                  </div>
+                </div>
+                <div class="detail-kontak d-flex align-items-start">
+                  <img
+                    src="/frontend/images/ic_email.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info">Email :</span>
+                      <br />
+                      kampungwisatalawang@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <div class="detail-kontak d-flex align-items-start">
+                  <img
+                    src="/frontend/images/ic_phone.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info">Phone :</span>
+                      <br />
+                      0812 - 6662 - 7449
+                    </p>
+                  </div>
+                </div>
+                <div class="detail-kontak d-flex align-items-start">
+                  <img
+                    src="/frontend/images/ic_facebook.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info">Facebook :</span>
+                      <br />
+                      Nagari Lawang
+                    </p>
+                  </div>
+                </div>
+                <div class="detail-kontak d-flex align-items-start">
+                  <img
+                    src="/frontend/images/ic_instagram.svg"
+                    alt=""
+                    class="kontak-image"
+                  />
+                  <div class="kontak-description">
+                    <p>
+                      <span class="font-weight-bold text-info"
+                        >Instagram :</span
+                      >
+                      <br />
+                      kampung_wisata_lawang
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row oleh-oleh-title">
+            <div class="col-lg-12">
+              <h2>Oleh-oleh Khas</h2>
+            </div>
+          </div>
+
+          <div class="row oleh-oleh">
+            <div class="col-lg-4">
+              <div
+                class="card-oleh-oleh"
+                style="
+                  background-image: url('/frontend/images/oleh-oleh-1.jpg');
+                "
+              ></div>
+              <h3>Air Tebu</h3>
+              <h3>Rp. 5.000</h3>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="card-oleh-oleh"
+                style="
+                  background-image: url('/frontend/images/oleh-oleh-2.jpg');
+                "
+              ></div>
+              <h3>Kacang Lawang</h3>
+              <h3>Rp. 10.000</h3>
+            </div>
+          </div>
+          <div class="row oleh-oleh-title">
+            <div class="col-lg-12">
+              <h2>Atraksi</h2>
+            </div>
+          </div>
+
+          <div class="row oleh-oleh">
+            <div class="col-lg-4">
+              <div
+                class="card-oleh-oleh"
+                style="background-image: url('/frontend/images/atraksi-1.jpg')"
+              ></div>
+              <h3>Kilang Tebu Tradisional</h3>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="card-oleh-oleh"
+                style="background-image: url('/frontend/images/atraksi-2.jpg')"
+              ></div>
+              <h3>Flying Fox Soul Puncak Lawang</h3>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="card-oleh-oleh"
+                style="background-image: url('/frontend/images/atraksi-3.jpg')"
+              ></div>
+              <h3>Paralayang</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-footer mt-5 mb-4 border-top">
+      <div class="container pt-5 pb-5">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                <h4>FEATURES</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Social Media Kit</a></li>
+                  <li><a href="#">Affiliate</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>ACCOUNT</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Refund</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Reward</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>OUR COMPANY</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3">
+                <h4>GET CONNECTED</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Depok</a></li>
+                  <li><a href="#">Indonesia</a></li>
+                  <li><a href="#">0821 - 222 - 1123</a></li>
+                  <li><a href="#">support@lawang.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center pt-4">
+          <div class="col-auto copyright">
+            2021 Copyright Lawang • All rights reserved • Made in Depok
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/frontend/libraries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
