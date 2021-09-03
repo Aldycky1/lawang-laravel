@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Facility;
+use App\Capacity;
+use App\Hotel;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\FacilityRequest;
-use App\Http\Requests\Admin\TouristObjectRequest;
+use App\Http\Requests\Admin\CapacityRequest;
 use App\TouristAttraction;
+use App\TouristPackage;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class FacilityController extends Controller
+class CapacityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +21,7 @@ class FacilityController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Facility::with(['tourist_attraction']);
+            $query = Capacity::with(['tourist_attraction', 'tourist_package', 'hotel']);
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -33,10 +34,10 @@ class FacilityController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="' . route('facility.edit', $item->id) . '">
+                                    <a class="dropdown-item" href="' . route('capacity.edit', $item->id) . '">
                                         Edit
                                     </a>
-                                    <form action="' . route('facility.destroy', $item->id) . '" method="POST">
+                                    <form action="' . route('capacity.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                             Hapus
@@ -51,7 +52,7 @@ class FacilityController extends Controller
                 ->make();
         }
 
-        return view('pages.admin.facility.index');
+        return view('pages.admin.capacity.index');
     }
 
     /**
@@ -62,9 +63,13 @@ class FacilityController extends Controller
     public function create()
     {
         $tourist_attractions = TouristAttraction::all();
+        $tourist_packages = TouristPackage::all();
+        $hotels = Hotel::all();
 
-        return view('pages.admin.facility.create', [
-            'tourist_attractions' => $tourist_attractions
+        return view('pages.admin.capacity.create', [
+            'tourist_attractions' => $tourist_attractions,
+            'tourist_packages' => $tourist_packages,
+            'hotels' => $hotels,
         ]);
     }
 
@@ -74,13 +79,13 @@ class FacilityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(FacilityRequest $request)
+    public function store(CapacityRequest $request)
     {
         $data = $request->all();
 
-        Facility::create($data);
+        Capacity::create($data);
 
-        return redirect()->route('facility.index');
+        return redirect()->route('capacity.index');
     }
 
     /**
@@ -103,11 +108,16 @@ class FacilityController extends Controller
     public function edit($id)
     {
         $tourist_attractions = TouristAttraction::all();
-        $item = Facility::findOrFail($id);
+        $tourist_packages = TouristPackage::all();
+        $hotels = Hotel::all();
 
-        return view('pages.admin.facility.edit', [
+        $item = Capacity::findOrFail($id);
+
+        return view('pages.admin.capacity.edit', [
             'item' => $item,
-            'tourist_attractions' => $tourist_attractions
+            'tourist_attractions' => $tourist_attractions,
+            'tourist_packages' => $tourist_packages,
+            'hotels' => $hotels,
         ]);
     }
 
@@ -118,15 +128,15 @@ class FacilityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(FacilityRequest $request, $id)
+    public function update(CapacityRequest $request, $id)
     {
         $data = $request->all();
 
-        $item = Facility::findOrFail($id);
+        $item = Capacity::findOrFail($id);
 
         $item->update($data);
 
-        return redirect()->route('facility.index');
+        return redirect()->route('capacity.index');
     }
 
     /**
@@ -137,10 +147,10 @@ class FacilityController extends Controller
      */
     public function destroy($id)
     {
-        $item = Facility::findOrFail($id);
+        $item = Capacity::findOrFail($id);
 
         $item->delete();
 
-        return redirect()->route('facility.index');
+        return redirect()->route('capacity.index');
     }
 }

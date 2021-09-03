@@ -32,6 +32,7 @@ Route::prefix('admin')
         Route::resource('facility', 'FacilityController');
         Route::resource('tourist-package', 'TouristPackageController');
         Route::resource('hotel', 'HotelController');
+        Route::resource('capacity', 'CapacityController');
         Route::resource('checkout', 'CheckoutController');
         Route::resource('user', 'UserController');
     });

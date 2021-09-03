@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label for="tourist_packages_id">Paket Wisata</label>
                             <select name="tourist_packages_id" id="tourist_packages_id" class="form-control" required>
-                                <option selected value="{{ $item->tourist_package->id }}">Tidak diganti</option>
+                                <option selected value="{{ $item->id }}">Tidak diganti</option>
                                 @foreach ($tourist_packages as $tourist_package)
                                     <option value="{{ $tourist_package->id }}">{{ $tourist_package->name }}</option>                              
                                 @endforeach

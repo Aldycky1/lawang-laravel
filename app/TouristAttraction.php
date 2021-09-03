@@ -24,4 +24,9 @@ class TouristAttraction extends Model
     {
         return $this->hasMany(TouristAttractionGallery::class, 'tourist_attractions_id', 'id');
     }
+
+    public function tourist_packages()
+    {
+        return $this->hasMany(TouristPackage::class, 'tourist_attractions_id', 'id');
+    }
 }

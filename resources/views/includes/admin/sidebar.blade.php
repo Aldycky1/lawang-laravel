@@ -72,6 +72,13 @@
             <span>Hotel</span>
         </a>
     </li>
+    <!-- Nav Item - Kapasitas -->
+    <li class="nav-item {{ (request()->is('admin/capacity*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('capacity.index') }}">
+            <i class="fas fa-fw fa-warehouse"></i>
+            <span>Kapasitas</span>
+        </a>
+    </li>
     <!-- Nav Item - Checkout -->
     <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('checkout.index') }}">

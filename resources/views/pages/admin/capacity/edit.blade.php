@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Tambah Hotel</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Hotel</h1>
             </div>
 
             @if ($errors->any())
@@ -22,11 +22,13 @@
 
             <div class="card-shadow">
                 <div class="card-body">
-                    <form action="{{ route('hotel.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('capacity.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+                        @method('PUT')
                         @csrf
                         <div class="form-group">
                             <label for="tourist_attractions_id">Nama Wisata</label>
                             <select name="tourist_attractions_id" id="tourist_attractions_id" class="form-control" required>
+                                <option value="{{ $item->tourist_attractions_id }}">Tidak diganti</option>
                                 @foreach ($tourist_attractions as $tourist_attraction)
                                     <option value="{{ $tourist_attraction->id }}">{{ $tourist_attraction->name }}</option>                              
                                 @endforeach
@@ -35,14 +37,28 @@
                         <div class="form-group">
                             <label for="tourist_packages_id">Paket Wisata</label>
                             <select name="tourist_packages_id" id="tourist_packages_id" class="form-control" required>
+                                <option value="{{ $item->tourist_packages_id }}">Tidak diganti</option>
                                 @foreach ($tourist_packages as $tourist_package)
                                     <option value="{{ $tourist_package->id }}">{{ $tourist_package->name }}</option>                              
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="name">Hotel</label>
-                            <input type="text" class="form-control" name="name" placeholder="Hotel ..." required />
+                            <label for="hotels_id">Hotel</label>
+                            <select name="hotels_id" id="hotels_id" class="form-control" required>
+                                <option value="{{ $item->hotels_id }}">Tidak diganti</option>
+                                @foreach ($hotels as $hotel)
+                                    <option value="{{ $hotel->id }}">{{ $hotel->name }}</option>                              
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="person">Jumlah Orang</label>                            
+                            <input type="text" class="form-control" id="person" name="person" value="{{ $item->person }}" />
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Harga</label>                            
+                            <input type="number" class="form-control" id="price" name="price" value="{{ $item->price }}" />
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
                             Simpan
