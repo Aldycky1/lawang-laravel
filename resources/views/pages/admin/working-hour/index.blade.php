@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
-@section('title', 'User')
+@section('title', 'Waktu Operasional')
 
 @section('content')
     <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">List User</h1>
-                <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-plus fa-sm text-white-50">Tambah User</i>
+                <h1 class="h3 mb-0 text-gray-800">Waktu Operasional</h1>
+                <a href="{{ route('working-hour.create') }}" class="btn btn-sm btn-primary shadow-sm">
+                    <i class="fas fa-plus fa-sm text-white-50">Tambah Waktu Operasional</i>
                 </a>
             </div>
 
@@ -20,9 +20,9 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nama User</th>
-                                    <th>Email</th>
-                                    <th>Roles</th>
+                                    <th>Nama Wisata</th>
+                                    <th>Jenis Operasional</th>
+                                    <th>Jam Operasional</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -48,9 +48,9 @@
             },
             columns: [
                 { data: 'id', name: 'id' },
+                { data: 'tourist_attraction.name', name: 'tourist_attraction.name' },
                 { data: 'name', name: 'name' },
-                { data: 'email', name: 'email' },
-                { data: 'roles', name: 'roles' },
+                { data: 'hours', name: 'hours' },
                 { 
                     data: 'action', 
                     name: 'action',

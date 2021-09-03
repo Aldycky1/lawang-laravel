@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TicketPrice extends Model
+class TouristObject extends Model
 {
     protected $fillable = [
-        'name', 'price', 'tourist_attractions_id'
+        'name', 'tourist_attractions_id'
     ];
 
     protected $hidden = [];

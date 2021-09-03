@@ -17,6 +17,11 @@ class TouristAttraction extends Model
 
     public function ticket_prices()
     {
-        $this->hasMany(TicketPrice::class, 'tourist_attractions_id', 'id');
+        return $this->hasMany(TicketPrice::class, 'tourist_attractions_id', 'id');
+    }
+
+    public function tourist_galleries()
+    {
+        return $this->hasMany(TouristAttractionGallery::class, 'tourist_attractions_id', 'id');
     }
 }

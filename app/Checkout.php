@@ -17,6 +17,6 @@ class Checkout extends Model
 
     public function users()
     {
-        $this->hasMany(User::class, 'checkouts_id', 'id');
+        return $this->hasMany(User::class, 'checkouts_id', 'id');
     }
 }

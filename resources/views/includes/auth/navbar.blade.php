@@ -1,5 +1,5 @@
 <nav class="row navbar navbar-expand-lg navbar-light bg-light">
-    <a href="/index.html" class="navbar-brand">
+    <a href="{{ route('home') }}" class="navbar-brand">
         <img
             src="{{ asset('frontend/frontend/images/logo.png') }}"
             alt="logo-nagari-lawang"
@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navb">
         <ul class="navbar-nav ml-auto mr-3">
             <li class="nav-item mx-md-1">
-                <a href="/index.html" class="nav-link">Home</a>
+                <a href="{{ route('home') }}" class="nav-link">Home</a>
             </li>
             <li class="nav-item mx-md-1">
                 <a href="/profil.html" class="nav-link">Profil</a>
@@ -52,7 +52,7 @@
         <!-- Desktop Button -->
         <form
             class="form-inline my-2 my-lg-0 d-sm-block"
-            action="/login.html"
+            action="{{ route('login') }}"
         >
             <button class="btn btn-login btn-navbar-right my-2 my-sm-0">
                 Log In

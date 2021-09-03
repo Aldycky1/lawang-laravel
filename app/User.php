@@ -41,6 +41,6 @@ class User extends Authenticatable
 
     public function checkout()
     {
-        $this->belongsTo(Checkout::class, 'checkouts_id', 'id');
+        return $this->belongsTo(Checkout::class, 'checkouts_id', 'id');
     }
 }

@@ -30,6 +30,27 @@
             <span>Galeri Wisata</span>
         </a>
     </li>
+    <!-- Nav Item - Harga Wisata -->
+    <li class="nav-item {{ (request()->is('admin/ticket*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('ticket.index') }}">
+            <i class="fas fa-fw fa-tags"></i>
+            <span>Harga Wisata</span>
+        </a>
+    </li>
+    <!-- Nav Item - Jam Operasional -->
+    <li class="nav-item {{ (request()->is('admin/working-hour*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('working-hour.index') }}">
+            <i class="fas fa-fw fa-hourglass-end"></i>
+            <span>Jam Operasional</span>
+        </a>
+    </li>
+    <!-- Nav Item - Object Wisata -->
+    <li class="nav-item {{ (request()->is('admin/tourist-object*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('tourist-object.index') }}">
+            <i class="fas fa-fw fa-umbrella-beach"></i>
+            <span>Objek Wisata</span>
+        </a>
+    </li>
     <!-- Nav Item - Checkout -->
     <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('checkout.index') }}">

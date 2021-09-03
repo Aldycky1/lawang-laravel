@@ -3,14 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\TouristGalleryRequest;
+use App\Http\Requests\Admin\TouristObjectRequest;
 use App\TouristAttraction;
-use App\TouristAttractionGallery;
+use App\TouristObject;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 
-class TouristGalleryController extends Controller
+class TouristObjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +19,7 @@ class TouristGalleryController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = TouristAttractionGallery::with(['tourist_attraction']);
+            $query = TouristObject::with(['tourist_attraction']);
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -33,7 +32,10 @@ class TouristGalleryController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <form action="' . route('tourist-gallery.destroy', $item->id) . '" method="POST">
+                                    <a class="dropdown-item" href="' . route('tourist-object.edit', $item->id) . '">
+                                        Edit
+                                    </a>
+                                    <form action="' . route('tourist-object.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                             Hapus
@@ -44,14 +46,11 @@ class TouristGalleryController extends Controller
                         </div>
                     ';
                 })
-                ->editColumn('photos', function ($item) {
-                    return $item->photos ? '<img src="' . Storage::url($item->photos) . '" style="max-height: 80px;" />' : '';
-                })
-                ->rawColumns(['action', 'photos'])
+                ->rawColumns(['action'])
                 ->make();
         }
 
-        return view('pages.admin.tourist-gallery.index');
+        return view('pages.admin.tourist-object.index');
     }
 
     /**
@@ -63,7 +62,7 @@ class TouristGalleryController extends Controller
     {
         $tourist_attractions = TouristAttraction::all();
 
-        return view('pages.admin.tourist-gallery.create', [
+        return view('pages.admin.tourist-object.create', [
             'tourist_attractions' => $tourist_attractions
         ]);
     }
@@ -74,15 +73,13 @@ class TouristGalleryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TouristGalleryRequest $request)
+    public function store(TouristObjectRequest $request)
     {
         $data = $request->all();
 
-        $data['photos'] = $request->file('photos')->store('assets/gallery-wisata', 'public');
+        TouristObject::create($data);
 
-        TouristAttractionGallery::create($data);
-
-        return redirect()->route('tourist-gallery.index');
+        return redirect()->route('tourist-object.index');
     }
 
     /**
@@ -104,7 +101,13 @@ class TouristGalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tourist_attractions = TouristAttraction::all();
+        $item = TouristObject::findOrFail($id);
+
+        return view('pages.admin.tourist-object.edit', [
+            'item' => $item,
+            'tourist_attractions' => $tourist_attractions
+        ]);
     }
 
     /**
@@ -114,9 +117,15 @@ class TouristGalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(TouristGalleryRequest $request, $id)
+    public function update(TouristObjectRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = TouristObject::findOrFail($id);
+
+        $item->update($data);
+
+        return redirect()->route('tourist-object.index');
     }
 
     /**
@@ -127,10 +136,10 @@ class TouristGalleryController extends Controller
      */
     public function destroy($id)
     {
-        $item = TouristAttractionGallery::findOrFail($id);
+        $item = TouristObject::findOrFail($id);
 
         $item->delete();
 
-        return redirect()->route('tourist-gallery.index');
+        return redirect()->route('tourist-object.index');
     }
 }
