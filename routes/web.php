@@ -29,6 +29,7 @@ Route::prefix('admin')
         Route::resource('ticket', 'TicketPriceController');
         Route::resource('working-hour', 'WorkingHourController');
         Route::resource('tourist-object', 'TouristObjectController');
+        Route::resource('facility', 'FacilityController');
         Route::resource('checkout', 'CheckoutController');
         Route::resource('user', 'UserController');
     });

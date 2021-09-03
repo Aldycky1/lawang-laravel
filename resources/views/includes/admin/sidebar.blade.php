@@ -51,6 +51,13 @@
             <span>Objek Wisata</span>
         </a>
     </li>
+    <!-- Nav Item - Fasilitas -->
+    <li class="nav-item {{ (request()->is('admin/facility*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('facility.index') }}">
+            <i class="fas fa-fw fa-utensils"></i>
+            <span>Fasilitas</span>
+        </a>
+    </li>
     <!-- Nav Item - Checkout -->
     <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('checkout.index') }}">

@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Tiket')
+@section('title', 'Objek Wisata')
 
 @section('content')
     <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Edit Foto Gallery</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Objek Wisata</h1>
             </div>
 
             @if ($errors->any())

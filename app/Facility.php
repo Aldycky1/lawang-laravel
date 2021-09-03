@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TouristObject extends Model
+class Facility extends Model
 {
     protected $fillable = [
         'name', 'tourist_attractions_id'
