@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Fasilitas')
+@section('title', 'Paket Wisata')
 
 @section('content')
     <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Edit Fasilitas</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Paket Wisata</h1>
             </div>
 
             @if ($errors->any())
@@ -22,7 +22,7 @@
 
             <div class="card-shadow">
                 <div class="card-body">
-                    <form action="{{ route('facility.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('tourist-package.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="form-group">
@@ -35,7 +35,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="name">Fasilitas</label>
+                            <label for="name">Paket Wisata</label>
                             <input type="text" class="form-control" name="name" value="{{ $item->name }}" required />
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">

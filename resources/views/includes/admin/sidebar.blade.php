@@ -58,6 +58,20 @@
             <span>Fasilitas</span>
         </a>
     </li>
+    <!-- Nav Item - Paket Wisata -->
+    <li class="nav-item {{ (request()->is('admin/tourist-package*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('tourist-package.index') }}">
+            <i class="fas fa-fw fa-cube"></i>
+            <span>Paket Wisata</span>
+        </a>
+    </li>
+    <!-- Nav Item - Hotel -->
+    <li class="nav-item {{ (request()->is('admin/hotel*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('hotel.index') }}">
+            <i class="fas fa-fw fa-hotel"></i>
+            <span>Hotel</span>
+        </a>
+    </li>
     <!-- Nav Item - Checkout -->
     <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('checkout.index') }}">

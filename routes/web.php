@@ -30,6 +30,8 @@ Route::prefix('admin')
         Route::resource('working-hour', 'WorkingHourController');
         Route::resource('tourist-object', 'TouristObjectController');
         Route::resource('facility', 'FacilityController');
+        Route::resource('tourist-package', 'TouristPackageController');
+        Route::resource('hotel', 'HotelController');
         Route::resource('checkout', 'CheckoutController');
         Route::resource('user', 'UserController');
     });

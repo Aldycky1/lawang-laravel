@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Fasilitas')
+@section('title', 'Hotel')
 
 @section('content')
     <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Edit Fasilitas</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Hotel</h1>
             </div>
 
             @if ($errors->any())
@@ -22,7 +22,7 @@
 
             <div class="card-shadow">
                 <div class="card-body">
-                    <form action="{{ route('facility.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('hotel.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="form-group">
@@ -35,7 +35,16 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="name">Fasilitas</label>
+                            <label for="tourist_packages_id">Paket Wisata</label>
+                            <select name="tourist_packages_id" id="tourist_packages_id" class="form-control" required>
+                                <option selected value="{{ $item->tourist_package->id }}">Tidak diganti</option>
+                                @foreach ($tourist_packages as $tourist_package)
+                                    <option value="{{ $tourist_package->id }}">{{ $tourist_package->name }}</option>                              
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Paket Wisata</label>
                             <input type="text" class="form-control" name="name" value="{{ $item->name }}" required />
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
