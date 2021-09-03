@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Facility;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\FacilityRequest;
-use App\Http\Requests\Admin\TouristObjectRequest;
 use App\TouristAttraction;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;

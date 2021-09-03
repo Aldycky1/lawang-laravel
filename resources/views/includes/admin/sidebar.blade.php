@@ -79,6 +79,13 @@
             <span>Kapasitas</span>
         </a>
     </li>
+    <!-- Nav Item - Ketentuan Paket -->
+    <li class="nav-item {{ (request()->is('admin/regulation*')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('regulation.index') }}">
+            <i class="fas fa-fw fa-cogs"></i>
+            <span>Ketentuan Paket</span>
+        </a>
+    </li>
     <!-- Nav Item - Checkout -->
     <li class="nav-item {{ (request()->is('admin/checkout*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('checkout.index') }}">

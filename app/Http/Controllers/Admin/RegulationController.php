@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Hotel;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\HotelRequest;
+use App\Http\Requests\Admin\RegulationRequest;
+use App\Regulation;
 use App\TouristAttraction;
-use App\TouristPackage;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class HotelController extends Controller
+class RegulationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +19,7 @@ class HotelController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Hotel::with(['tourist_attraction', 'tourist_package']);
+            $query = Regulation::with(['tourist_attraction']);
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -33,10 +32,10 @@ class HotelController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="' . route('hotel.edit', $item->id) . '">
+                                    <a class="dropdown-item" href="' . route('regulation.edit', $item->id) . '">
                                         Edit
                                     </a>
-                                    <form action="' . route('hotel.destroy', $item->id) . '" method="POST">
+                                    <form action="' . route('regulation.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                             Hapus
@@ -51,7 +50,7 @@ class HotelController extends Controller
                 ->make();
         }
 
-        return view('pages.admin.hotel.index');
+        return view('pages.admin.regulation.index');
     }
 
     /**
@@ -62,11 +61,9 @@ class HotelController extends Controller
     public function create()
     {
         $tourist_attractions = TouristAttraction::all();
-        $tourist_packages = TouristPackage::all();
 
-        return view('pages.admin.hotel.create', [
-            'tourist_attractions' => $tourist_attractions,
-            'tourist_packages' => $tourist_packages,
+        return view('pages.admin.regulation.create', [
+            'tourist_attractions' => $tourist_attractions
         ]);
     }
 
@@ -76,13 +73,13 @@ class HotelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(HotelRequest $request)
+    public function store(RegulationRequest $request)
     {
         $data = $request->all();
 
-        Hotel::create($data);
+        Regulation::create($data);
 
-        return redirect()->route('hotel.index');
+        return redirect()->route('regulation.index');
     }
 
     /**
@@ -105,14 +102,11 @@ class HotelController extends Controller
     public function edit($id)
     {
         $tourist_attractions = TouristAttraction::all();
-        $tourist_packages = TouristPackage::all();
+        $item = Regulation::findOrFail($id);
 
-        $item = Hotel::findOrFail($id);
-
-        return view('pages.admin.hotel.edit', [
+        return view('pages.admin.regulation.edit', [
             'item' => $item,
-            'tourist_attractions' => $tourist_attractions,
-            'tourist_packages' => $tourist_packages,
+            'tourist_attractions' => $tourist_attractions
         ]);
     }
 
@@ -123,15 +117,15 @@ class HotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(HotelRequest $request, $id)
+    public function update(RegulationRequest $request, $id)
     {
         $data = $request->all();
 
-        $item = Hotel::findOrFail($id);
+        $item = Regulation::findOrFail($id);
 
         $item->update($data);
 
-        return redirect()->route('hotel.index');
+        return redirect()->route('regulation.index');
     }
 
     /**
@@ -142,10 +136,10 @@ class HotelController extends Controller
      */
     public function destroy($id)
     {
-        $item = Hotel::findOrFail($id);
+        $item = Regulation::findOrFail($id);
 
         $item->delete();
 
-        return redirect()->route('hotel.index');
+        return redirect()->route('regulation.index');
     }
 }

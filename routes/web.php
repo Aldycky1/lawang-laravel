@@ -33,6 +33,7 @@ Route::prefix('admin')
         Route::resource('tourist-package', 'TouristPackageController');
         Route::resource('hotel', 'HotelController');
         Route::resource('capacity', 'CapacityController');
+        Route::resource('regulation', 'RegulationController');
         Route::resource('checkout', 'CheckoutController');
         Route::resource('user', 'UserController');
     });
