@@ -86,49 +86,32 @@
     <section class="section-wisata-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <a href="/soul-puncak-lawang.html" class="card-wisata-link">
-                        <div
-                            class="card-wisata"
-                            style="background-image: url('frontend/frontend/images/wisata-1.jpg')"
-                        >
-                        <div class="linear-gradient" style="z-index: 1">
-                            <h3 class="text-center text-light justify-content-center">
-                                Soul Puncak Lawang
-                            </h3>
-                            <div class="popular" style="z-index: 1">Wisata Popular</div>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                <a href="/lawang-adventure-park.html" class="card-wisata-link">
-                    <div
-                    class="card-wisata"
-                    style="background-image: url('frontend/frontend/images/wisata-2.jpg')"
-                    >
-                    <div class="linear-gradient" style="z-index: 1">
-                        <h3 class="text-center text-light justify-content-center">
-                            Lawang Park
-                        </h3>
-                    </div>
-                    </div>
-                </a>
-                </div>
-                <div class="col-lg-4">
-                <a href="/ambun-tanai.html" class="card-wisata-link">
-                    <div
-                        class="card-wisata"
-                        style="background-image: url('frontend/frontend/images/wisata-3.jpg')"
-                    >
-                        <div class="linear-gradient">
-                            <h3 class="text-center text-light justify-content-center">
-                                Ambun Tanai
-                            </h3>
-                        </div>
-                    </div>
-                </a>
-                </div>
+                @foreach ($tourist_attractions as $tourist_attraction)
+                    <div class="col-lg-4">
+                        <a href="#" class="card-wisata-link">
+                            <div
+                                class="card-wisata"
+                                style=
+                                    "
+                                        @foreach($tourist_attraction->tourist_galleries as $image)
+                                            @if($image->is_home)
+                                                background-image: url('{{ Storage::url($image->photos) }}')                                    
+                                            @endif
+                                        @endforeach
+                                    "
+                            >
+                                <div class="linear-gradient" style="z-index: 1">
+                                    <h3 class="text-center text-light justify-content-center">
+                                        {{ $tourist_attraction->name }}
+                                    </h3>
+                                    @if ($tourist_attraction[0])
+                                        <div class="popular" style="z-index: 1">Wisata Popular</div>                                        
+                                    @endif
+                                </div>
+                            </div>
+                        </a>
+                    </div>                    
+                @endforeach
             </div>
         </div>
     </section>
@@ -218,7 +201,7 @@
                         >Booking Paket</a
                     >
                     <a
-                        href="/profil.html#contactPerson"
+                        href="{{ route('profile') }}#contactPerson"
                         class="btn btn-kedua mt-4 mx-1"
                         >Butuh Bantuan</a
                     >
