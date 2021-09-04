@@ -35,9 +35,12 @@
                         Wisata
                     </a>
                 <div class="dropdown-menu">
-                    <a href="/soul-puncak-lawang.html" class="dropdown-item">Soul Puncak Lawang</a>
-                    <a href="/lawang-adventure-park.html" class="dropdown-item">Lawang Park</a>
-                    <a href="/ambun-tanai.html" class="dropdown-item">Ambun Tanai</a>
+                    @php
+                        $tourist_attractions = App\TouristAttraction::all();
+                    @endphp
+                    @foreach ($tourist_attractions as $tourist_attraction)
+                        <a href="{{ route('tourist-attraction', $tourist_attraction->slug) }}" class="dropdown-item {{ route('tourist-attraction', $tourist_attraction->slug) == url()->current() ? 'active' : ''}}">{{ $tourist_attraction->name }}</a>                    
+                    @endforeach
                 </div>
                 </li>
                 <li class="nav-item mx-md-1">

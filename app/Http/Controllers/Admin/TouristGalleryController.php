@@ -33,6 +33,9 @@ class TouristGalleryController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="' . route('tourist-gallery.edit', $item->id) . '">
+                                        Edit
+                                    </a>
                                     <form action="' . route('tourist-gallery.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
@@ -104,7 +107,13 @@ class TouristGalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = TouristAttractionGallery::findOrFail($id);
+        $tourist_attractions = TouristAttraction::all();
+
+        return view('pages.admin.tourist-gallery.edit', [
+            'item' => $item,
+            'tourist_attractions' => $tourist_attractions
+        ]);
     }
 
     /**
@@ -116,7 +125,19 @@ class TouristGalleryController extends Controller
      */
     public function update(TouristGalleryRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $item = TouristAttractionGallery::findOrFail($id);
+
+        if ($data['photo'] =  $request->file("photo")) {
+            $data['photo'] = $request->file('photo')->store('assets/user', 'public');
+        } else {
+            $data['photo'] = $item->photo;
+        }
+
+        $item->update($data);
+
+        return redirect()->route('tourist-gallery.index');
     }
 
     /**

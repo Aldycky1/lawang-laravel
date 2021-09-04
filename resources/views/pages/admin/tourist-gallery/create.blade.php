@@ -48,7 +48,7 @@
                             </label>
                         </div>
                         <div class="form-group">
-                            <label for="is_tempatWisata">Set foto untuk bagian halaman wisata?</label>
+                            <label for="is_tempat_wisata">Set foto untuk bagian halaman wisata?</label>
                             <br />
                             <label>
                                 <input type="radio" name="is_tempat_wisata" value="1" class="form-control" style="width: 18px;">Ya

@@ -40,7 +40,7 @@
                         >Mulai Berlibur</a
                     />
                     <a
-                        href="/profil.html"
+                        href="{{ route('profile') }}"
                         class="btn btn-kedua btn-lihat-selengkapnya mt-4 mx-1"
                         >Lihat Selengkapnya</a
                     />
@@ -104,7 +104,7 @@
                                     <h3 class="text-center text-light justify-content-center">
                                         {{ $tourist_attraction->name }}
                                     </h3>
-                                    @if ($tourist_attraction[0])
+                                    @if ($tourist_attraction->is_popular)
                                         <div class="popular" style="z-index: 1">Wisata Popular</div>                                        
                                     @endif
                                 </div>

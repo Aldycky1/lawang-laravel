@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/profile', 'ProfileController@profile')->name('profile');
+Route::get('/tourist-attraction/{slug}', 'TouristAttractionController@show')->name('tourist-attraction');
+
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/profile', 'ProfileController@profile')->name('profile');
 });
 
 Auth::routes();

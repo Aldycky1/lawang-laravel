@@ -36,7 +36,28 @@
                         <div class="form-group">
                             <label for="address">Alamat Wisata</label>
                             <input type="text" class="form-control" name="address" value="{{ $item->address }}" required>                            
-                        </div>                                                 
+                        </div>              
+                        <div class="form-group">
+                            <label for="is_popular">Set wisata sebagai popular?</label>
+                            <br />
+                            @if ($item->is_popular == 1)
+                                <label>
+                                    <input type="radio" name="is_popular" checked value="1" class="form-control" style="width: 18px;">Ya
+                                </label>    
+                                &nbsp;
+                                <label>
+                                    <input type="radio" name="is_popular" value="0" class="form-control" style="width: 18px;">Tidak
+                                </label>                            
+                            @else
+                                <label>
+                                    <input type="radio" name="is_popular" value="1" class="form-control" style="width: 18px;">Ya
+                                </label>    
+                                &nbsp;
+                                <label>
+                                    <input type="radio" name="is_popular" checked value="0" class="form-control" style="width: 18px;">Tidak
+                                </label> 
+                            @endif
+                        </div>                                    
                         <button type="submit" class="btn btn-primary btn-block">
                             Simpan
                         </button>

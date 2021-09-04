@@ -26,7 +26,8 @@ class TouristAttractionRequest extends FormRequest
         return [
             'name' => 'required|string',
             'description' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'is_popular' => 'required|boolean',
         ];
     }
 }
