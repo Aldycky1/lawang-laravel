@@ -36,6 +36,7 @@ Route::prefix('admin')
         Route::resource('facility', 'FacilityController');
         Route::resource('tourist-package', 'TouristPackageController');
         Route::resource('hotel', 'HotelController');
+        Route::resource('hotel-price', 'HotelPriceController');
         Route::resource('capacity', 'CapacityController');
         Route::resource('regulation', 'RegulationController');
         Route::resource('checkout', 'CheckoutController');

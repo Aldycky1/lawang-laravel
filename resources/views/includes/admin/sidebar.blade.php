@@ -66,10 +66,17 @@
         </a>
     </li>
     <!-- Nav Item - Hotel -->
-    <li class="nav-item {{ (request()->is('admin/hotel*')) ? 'active' : '' }}">
+    <li class="nav-item {{ (request()->is('admin/hotel')) || (request()->is('admin/hotel/*')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('hotel.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Hotel</span>
+        </a>
+    </li>
+    <!-- Nav Item - Harga Hotel -->
+    <li class="nav-item {{ (request()->is('admin/hotel-price*'))  ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('hotel-price.index') }}">
+            <i class="fas fa-fw fa-money-check-alt"></i>
+            <span>Harga Hotel</span>
         </a>
     </li>
     <!-- Nav Item - Kapasitas -->

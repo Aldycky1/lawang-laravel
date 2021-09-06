@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Capacity;
+use App\Hotel;
+use App\HotelPrice;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\CapacityRequest;
+use App\Http\Requests\Admin\HotelPriceRequest;
 use App\TouristAttraction;
+use App\TouristPackage;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class CapacityController extends Controller
+class HotelPriceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +22,7 @@ class CapacityController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Capacity::with(['tourist_attraction']);
+            $query = HotelPrice::with(['tourist_attraction', 'tourist_package', 'hotel', 'capacity']);
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -32,10 +35,10 @@ class CapacityController extends Controller
                                         Aksi
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="' . route('capacity.edit', $item->id) . '">
+                                    <a class="dropdown-item" href="' . route('hotel-price.edit', $item->id) . '">
                                         Edit
                                     </a>
-                                    <form action="' . route('capacity.destroy', $item->id) . '" method="POST">
+                                    <form action="' . route('hotel-price.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
                                         <button type="submit" class="dropdown-item text-danger">
                                             Hapus
@@ -50,7 +53,7 @@ class CapacityController extends Controller
                 ->make();
         }
 
-        return view('pages.admin.capacity.index');
+        return view('pages.admin.hotel-price.index');
     }
 
     /**
@@ -61,9 +64,15 @@ class CapacityController extends Controller
     public function create()
     {
         $tourist_attractions = TouristAttraction::all();
+        $tourist_packages = TouristPackage::all();
+        $hotels = Hotel::all();
+        $capacities = Capacity::all();
 
-        return view('pages.admin.capacity.create', [
+        return view('pages.admin.hotel-price.create', [
             'tourist_attractions' => $tourist_attractions,
+            'tourist_packages' => $tourist_packages,
+            'hotels' => $hotels,
+            'capacities' => $capacities
         ]);
     }
 
@@ -73,13 +82,13 @@ class CapacityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CapacityRequest $request)
+    public function store(HotelPriceRequest $request)
     {
         $data = $request->all();
 
-        Capacity::create($data);
+        HotelPrice::create($data);
 
-        return redirect()->route('capacity.index');
+        return redirect()->route('hotel-price.index');
     }
 
     /**
@@ -102,12 +111,18 @@ class CapacityController extends Controller
     public function edit($id)
     {
         $tourist_attractions = TouristAttraction::all();
+        $tourist_packages = TouristPackage::all();
+        $hotels = Hotel::all();
+        $capacities = Capacity::all();
 
-        $item = Capacity::findOrFail($id);
+        $item = HotelPrice::findOrFail($id);
 
-        return view('pages.admin.capacity.edit', [
+        return view('pages.admin.hotel-price.edit', [
             'item' => $item,
             'tourist_attractions' => $tourist_attractions,
+            'tourist_packages' => $tourist_packages,
+            'hotels' => $hotels,
+            'capacities' => $capacities,
         ]);
     }
 
@@ -118,15 +133,15 @@ class CapacityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CapacityRequest $request, $id)
+    public function update(HotelPriceRequest $request, $id)
     {
         $data = $request->all();
 
-        $item = Capacity::findOrFail($id);
+        $item = HotelPrice::findOrFail($id);
 
         $item->update($data);
 
-        return redirect()->route('capacity.index');
+        return redirect()->route('hotel-price.index');
     }
 
     /**
@@ -137,10 +152,10 @@ class CapacityController extends Controller
      */
     public function destroy($id)
     {
-        $item = Capacity::findOrFail($id);
+        $item = HotelPrice::findOrFail($id);
 
         $item->delete();
 
-        return redirect()->route('capacity.index');
+        return redirect()->route('hotel-price.index');
     }
 }

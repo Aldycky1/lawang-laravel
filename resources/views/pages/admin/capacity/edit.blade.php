@@ -35,30 +35,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="tourist_packages_id">Paket Wisata</label>
-                            <select name="tourist_packages_id" id="tourist_packages_id" class="form-control" required>
-                                <option value="{{ $item->tourist_packages_id }}">Tidak diganti</option>
-                                @foreach ($tourist_packages as $tourist_package)
-                                    <option value="{{ $tourist_package->id }}">{{ $tourist_package->name }}</option>                              
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="hotels_id">Hotel</label>
-                            <select name="hotels_id" id="hotels_id" class="form-control" required>
-                                <option value="{{ $item->hotels_id }}">Tidak diganti</option>
-                                @foreach ($hotels as $hotel)
-                                    <option value="{{ $hotel->id }}">{{ $hotel->name }}</option>                              
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="person">Jumlah Orang</label>                            
                             <input type="text" class="form-control" id="person" name="person" value="{{ $item->person }}" />
-                        </div>
-                        <div class="form-group">
-                            <label for="price">Harga</label>                            
-                            <input type="number" class="form-control" id="price" name="price" value="{{ $item->price }}" />
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
                             Simpan

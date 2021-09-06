@@ -69,8 +69,8 @@
 @endsection
 
 @push('after-script')
-    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>    
     <script>
-        CKEDITOR.replace( 'editor' );
+            CKEDITOR.replace( 'editor' );
     </script>
 @endpush

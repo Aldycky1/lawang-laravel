@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
-@section('title', 'Kapasitas')
+@section('title', 'Harga Hotel')
 
 @section('content')
     <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Kapasitas</h1>
-                <a href="{{ route('capacity.create') }}" class="btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-plus fa-sm text-white-50">Tambah Kapasitas</i>
+                <h1 class="h3 mb-0 text-gray-800">Harga Hotel</h1>
+                <a href="{{ route('hotel-price.create') }}" class="btn btn-sm btn-primary shadow-sm">
+                    <i class="fas fa-plus fa-sm text-white-50">Tambah Harga Hotel</i>
                 </a>
             </div>
 
@@ -21,7 +21,10 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nama Wisata</th>
-                                    <th>Jumlah Orang</th>
+                                    <th>Paket Wisata</th>
+                                    <th>Hotel</th>
+                                    <th>Kapasitas</th>
+                                    <th>Harga Hotel</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -48,7 +51,10 @@
             columns: [
                 { data: 'id', name: 'id' },
                 { data: 'tourist_attraction.name', name: 'tourist_attraction.name' },
-                { data: 'person', name: 'person' },
+                { data: 'tourist_package.name', name: 'tourist_package.name' },
+                { data: 'hotel.name', name: 'hotel.name' },
+                { data: 'capacity.person', name: 'capacity.person' },
+                { data: 'price', name: 'price' },
                 { 
                     data: 'action', 
                     name: 'action',

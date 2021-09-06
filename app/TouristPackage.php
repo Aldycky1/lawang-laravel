@@ -16,4 +16,9 @@ class TouristPackage extends Model
     {
         return $this->belongsTo(TouristAttraction::class, 'tourist_attractions_id', 'id');
     }
+
+    public function hotels()
+    {
+        return $this->hasMany(Hotel::class, 'tourist_packages_id', 'id');
+    }
 }

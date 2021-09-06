@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CapacityRequest extends FormRequest
+class HotelPriceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,11 @@ class CapacityRequest extends FormRequest
     public function rules()
     {
         return [
-            'person' => 'required|string',
+            'price' => 'required|integer',
             'tourist_attractions_id' => 'required|exists:tourist_attractions,id',
+            'tourist_packages_id' => 'required|exists:tourist_packages,id',
+            'hotels_id' => 'required|exists:hotels,id',
+            'capacities_id' => 'required|exists:capacities,id',
         ];
     }
 }
